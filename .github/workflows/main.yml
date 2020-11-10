@@ -30,8 +30,8 @@ jobs:
         run: cmake .
 
       # Runs a set of commands using the runners shell
-      - name: make executables
+      - name: Run make 
         run: make
 
-      - name: run tests
+      - name: Run test executable
         run: ./tests
