@@ -26,3 +26,11 @@ int Rectangle::perimeter() {
     int perimeter = 2 * (width + height);
     return perimeter;
 }
+
+int Rectangle::get_height() {
+    return height;
+}
+
+int Rectangle::get_width() {
+    return width;
+}
