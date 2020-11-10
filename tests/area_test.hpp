@@ -7,22 +7,22 @@
 
 TEST(AreaTest, positiveArea) {
     Rectangle r(5, 2);
-    EXPECT_EQ(r->area(), 10);
+    EXPECT_EQ(r.area(), 10);
 }
 
 TEST(AreaTest, zeroArea) {
     Rectangle r;
-    EXPECT_EQ(r->area(), 0);
+    EXPECT_EQ(r.area(), 0);
 }
 
 TEST(AreaTest, negArea) {
     Rectangle r(-5,3);
-    EXPECT_EQ(r->area(), -15);
+    EXPECT_EQ(r.area(), -15);
 }
 
 TEST(AreaTest, twoNegInputs) {
     Rectangle r(-4, -2);
-    EXPECT_EQ(r->area(), 8);
+    EXPECT_EQ(r.area(), 8);
 }
 
 #endif
