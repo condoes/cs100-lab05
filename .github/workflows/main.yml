@@ -32,4 +32,4 @@ jobs:
       - name: RUn make and build files
         run: |
         make
-        ./tests
+        ./test
