@@ -7,6 +7,7 @@ name: CI
 on:
   push:
     branches: [ main ]
+    branches: [ main, galva041/ci_setup ]
   pull_request:
     branches: [ main ]
 
