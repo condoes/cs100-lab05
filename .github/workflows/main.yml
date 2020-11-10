@@ -6,7 +6,7 @@ name: CI
 # events but only for the main branch
 on:
   push:
-    branches: [ main, cdo032/ci_setup ]
+    branches: [ main, cdo032/passing_tests]
   pull_request:
     branches: [ main ]
 
@@ -21,13 +21,18 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      -uses:
+        with:
+          submodule: recursive
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Run cmake .
+        run: cmake .
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Run make and build file
+        run: make
+
+      -name: execute tests
+        run: ./tests
+          
