@@ -3,7 +3,10 @@
 
 using namespace std;
 
-Rectangle::Rectangle() {}
+Rectangle::Rectangle() {
+    width = 0;
+    height = 0;
+}
 
 Rectangle::Rectangle(int w, int h) {
     width = w;
