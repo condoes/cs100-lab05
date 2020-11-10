@@ -12,7 +12,7 @@ TEST(ConstructorTest, defaultConstructor) {
 }
 
 TEST(ConstructorTest, positiveParamaterized) {
-    Rectangle r(5, 6)
+    Rectangle r(5, 6);
     EXPECT_EQ(r.get_width(), 5);
     EXPECT_EQ(r.get_height(), 6);
 }
