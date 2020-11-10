@@ -21,15 +21,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - sobmodule: recursive 
+      - with:
+        sobmodule: recursive 
 
       # Runs a single command using the runners shell
       - name: Run cmake .
         run: cmake .
 
       # Runs a set of commands using the runners shell
-      - name: Run make 
-        run: make
-
-      - name: Run test executable
-        run: ./tests
+      - name: |
+        make
+        ./tests
