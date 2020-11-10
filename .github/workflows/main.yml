@@ -6,7 +6,7 @@ name: CI
 # events but only for the main branch
 on:
   push:
-    branches: [ main, galva041/failing_tests ]
+    branches: [ main, galva041/failing_tests]
   pull_request:
     branches: [ main ]
 
@@ -21,15 +21,15 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - with:
-        submodule: recursive 
+        with:
+          submodule: recursive 
 
       # Runs a single command using the runners shell
       - name: Run cmake .
         run: cmake .
 
       # Runs a set of commands using the runners shell
-      - name: RUn make and build files
+      - name: Run make and build files
         run: |
-        make
-        ./test
+          make
+          ./test
